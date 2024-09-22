@@ -1,0 +1,39 @@
+body {
+    background-color: rgba(0, 0, 0, 0.867);
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+    margin: 0;
+    font-family:'Courier New', Courier, monospace;
+}
+.sidebar {
+    background-color: rgb(70, 43, 226);
+    grid-area: 1/1/2/2;
+    box-shadow: 5px 0px 10px black;
+    display: flex;
+    flex-direction: column;
+}
+
+.addBook {
+    width: 100px;
+    align-self: center;
+}
+.sidebar>p {
+    color: white;
+    font-weight: bolder;
+    font-size: 40px;
+    align-self: center;
+}
+
+.library {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+}
+.library>div {
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+}
