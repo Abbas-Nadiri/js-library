@@ -10,13 +10,11 @@ function Book(title, author, pages, readStatus) {
 
 const body = document.querySelector("body");
 const container = document.querySelector(".library");
-const addBook = document.querySelector(".submit");
+const button = document.querySelector(".addBook");
 
-addBook.addEventListener("click", () => {
-  /*
+button.addEventListener("click", () => {
+  event.preventDefault();
   const div = document.createElement("div");
   div.textContent = "new book";
   container.appendChild(div);
-  */
- console.log("hi");
 });
