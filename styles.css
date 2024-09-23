@@ -14,26 +14,62 @@ body {
     flex-direction: column;
 }
 
-.addBook {
-    width: 100px;
-    align-self: center;
-}
+
 .sidebar>p {
     color: white;
     font-weight: bolder;
     font-size: 40px;
     align-self: center;
+    border: 1px solid orange;
+}
+
+form {
+    border: 1px solid red;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    gap: 10px;
+}
+
+form>label, legend, form>div>label {
+    color:white;
+    align-self: center;
+}
+
+form>input {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    height: 26px;
+    border-radius: 0.5rem;
+    align-self: center;
+    box-shadow: 1px 1px 5px black;
+}
+
+form>button {
+    height: 30px;
+    grid-area: 5/2/6/3;
+    width: 70%;
+    margin-top: 20px;
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 1px 1px 5px black;
+}
+
+button:active {
+    transform: translateY(2px);
+    transition: 0.1s;
+    box-shadow: none;
 }
 
 .library {
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
 }
 .library>div {
     background-color: aqua;
-    height: 100px;
-    width: 100px;
+    height: 100%;
+    width: 100%;
 }
