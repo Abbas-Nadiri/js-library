@@ -10,8 +10,30 @@
 <body>
     <div class="sidebar">
         <p>Library</p>
-        <button class="addBook">click</button>
-        <form></form>
+
+        <form>
+            <label for="title">Title:</label>
+            <input type="text" id="title">
+
+            <label for="author">Author:</label>
+            <input type="text" id="author">
+
+            <label for="pages">Pages:</label>
+            <input type="number">
+
+            <legend>Read yet?:</legend>
+
+            <div>
+                <label for="radio-yes">Yes</label>
+                <input type="radio" id="radio-yes" name="read-status">
+                <label for="radio-no">No</label>
+                <input type="radio" id="radio-no" name="read-status">
+            </div>
+
+            
+            <button class="addBook">Add to Library</button>
+        </form>
+
     </div>
     <div class="library">
     </div>
