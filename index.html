@@ -13,21 +13,21 @@
 
         <form>
             <label for="title">Title:</label>
-            <input type="text" id="title">
+            <input type="text" id="title" name="book-title" required> 
 
             <label for="author">Author:</label>
-            <input type="text" id="author">
+            <input type="text" id="author" name="book-author" required>
 
             <label for="pages">Pages:</label>
-            <input type="number">
+            <input type="number" id="pages" name="book-pages" required>
 
             <legend>Read yet?:</legend>
 
             <div>
                 <label for="radio-yes">Yes</label>
-                <input type="radio" id="radio-yes" name="read-status">
+                <input type="radio" id="radio-yes" name="read-status" value="Yes" required>
                 <label for="radio-no">No</label>
-                <input type="radio" id="radio-no" name="read-status">
+                <input type="radio" id="radio-no" name="read-status" value="No" required>
             </div>
 
             
