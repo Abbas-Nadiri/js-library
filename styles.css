@@ -43,6 +43,16 @@ form>input {
     box-shadow: 1px 1px 5px black;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
 form>button {
     height: 30px;
     grid-area: 5/2/6/3;
@@ -74,6 +84,7 @@ button:active {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 0.5rem;
 }
 
 .library>div>div {
@@ -82,10 +93,15 @@ button:active {
     height: 10%;
 }
 
-.library>div>div>button {
+.library>div>div>button, .library>div>button {
     height: 30px;
     border-radius: 0.5rem;
     border: none;
     box-shadow: 1px 1px 5px black;
     font-family: 'Courier New', Courier, monospace;
+}
+
+.library>div>button {
+    background-color: rgb(252, 77, 77);
+    margin-top: 20px;
 }
