@@ -11,6 +11,14 @@ function Book(title, author, pages, readStatus, id) {
     this.id = id;
   }
 
+  Book.prototype.toggleRead = function() {
+    if (this.readStatus == "Yes") {
+      this.readStatus = "No";
+    } else {
+      this.readStatus = "Yes";
+    }
+  }
+  
   function createBook(book) {
     const div = document.createElement("div");
     const bookTitle = document.createElement("p");
@@ -30,6 +38,11 @@ function Book(title, author, pages, readStatus, id) {
     div.append(bookTitle, bookAuthor, bookPages, readDiv, removeButton);
     library.append(div);
     
+    readStatus.addEventListener("click", () => {
+      book.toggleRead();
+      readStatus.textContent = book.readStatus;
+    })
+
     removeButton.addEventListener("click", () => {
       div.remove();
       myLibrary.splice(book.id, 1);
@@ -56,3 +69,4 @@ button.addEventListener("click", () => {
   event.preventDefault();
   addBookToLibrary();
 });
+
