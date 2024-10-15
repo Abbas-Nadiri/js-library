@@ -3,7 +3,8 @@ const myLibrary = [];
 const library = document.querySelector(".library");
 const button = document.querySelector(".addBook");
 
-function Book(title, author, pages, readStatus, id) {
+class Book {
+  constructor (title, author, pages, readStatus, id){
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -11,7 +12,7 @@ function Book(title, author, pages, readStatus, id) {
     this.id = id;
   }
 
-  Book.prototype.toggleRead = function() {
+  toggleRead(){
     if (this.readStatus == "Yes") {
       this.readStatus = "No";
     } else {
@@ -19,6 +20,27 @@ function Book(title, author, pages, readStatus, id) {
     }
   }
   
+}
+
+/*
+function Book(title, author, pages, readStatus, id) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.readStatus = readStatus;
+    this.id = id;
+  }
+*/ 
+/*
+  Book.prototype.toggleRead = function() {
+    if (this.readStatus == "Yes") {
+      this.readStatus = "No";
+    } else {
+      this.readStatus = "Yes";
+    }
+  }
+  */
+
   function createBook(book) {
     const div = document.createElement("div");
     const bookTitle = document.createElement("p");
@@ -55,6 +77,7 @@ function addBookToLibrary() {
   const bookAuthor = document.getElementById("author");
   const bookPages = document.getElementById("pages");
   const bookStatus = document.querySelector("input[name='read-status']:checked");
+
   if(bookTitle.value && bookAuthor.value && bookPages.value && bookStatus.value) {
     const newBook = new Book(bookTitle.value, bookAuthor.value, Number(bookPages.value), bookStatus.value, null);
     myLibrary.push(newBook);
